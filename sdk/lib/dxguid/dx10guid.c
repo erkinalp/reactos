@@ -30,6 +30,7 @@
 #include "objbase.h"
 #include "olectl.h"
 #include "initguid.h"
+#include "dxva.h"
 
 #if 0
 #include "d3d10_1.h"
