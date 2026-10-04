@@ -31,10 +31,9 @@ int _fpclass(double __d)
         {
             return (d.d->sign == 0) ? _FPCLASS_PINF : _FPCLASS_NINF;
         }
-        /* Windows will never return Signaling NaN */
         else
         {
-            return _FPCLASS_QNAN;
+            return (d.d->mantissah & 0x80000) ? _FPCLASS_QNAN : _FPCLASS_SNAN;
         }
     }
 
